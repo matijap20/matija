@@ -1,4 +1,4 @@
-##Projekt nexus
+## Projekt nexus
 
 Projekt Misija Nexus predstavlja integrirani analitički sustav za identifikaciju optimalnih lokacija za bušenje unutar kratera Jezero na Marsu. Primarni cilj sustava je obrada i interpretacija telemetrijskih podataka prikupljenih putem senzora na površini Marsa, s naglaskom na detekciju uvjeta koji potencijalno ukazuju na prisutnost vode i organskih spojeva.
 
