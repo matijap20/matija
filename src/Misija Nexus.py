@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import json
 
-df1 = pd.read_csv("moji_mars_podaci/mars_lokacije.csv", sep=";", decimal=",")
-df2 = pd.read_csv("moji_mars_podaci/mars_uzorci.csv", sep=";", decimal=",")
+df1 = pd.read_csv("data/mars_lokacije.csv", sep=";", decimal=",")
+df2 = pd.read_csv("data/mars_uzorci.csv", sep=";", decimal=",")
 df = pd.merge(df1, df2, on="ID_Uzorka")
 
 uvjeti = (
@@ -37,7 +37,7 @@ plt.colorbar(label="Gustoća točaka")
 plt.xlabel("Temperatura tla (°C)")
 plt.ylabel("H2O (%)")
 
-plt.savefig("graf1_temperatura_voda.png", dpi=200)
+plt.savefig("assets/graf1_temperatura_voda.png", dpi=200)
 plt.close()
 
 
@@ -62,7 +62,7 @@ plt.scatter(
 
 plt.colorbar(label="Dubina bušenja (cm)")
 
-plt.savefig("graf2_karta_dubine.png", dpi=200)
+plt.savefig("assets/graf2_karta_dubine.png", dpi=200)
 plt.close()
 
 
@@ -86,7 +86,7 @@ sns.kdeplot(
     alpha=0.3
 )
 
-plt.savefig("graf3_metan.png", dpi=200)
+plt.savefig("assets/graf3_metan.png", dpi=200)
 plt.close()
 
 
@@ -112,7 +112,7 @@ plt.scatter(
     edgecolor="black"
 )
 
-plt.savefig("karta_kandidata.png", dpi=200)
+plt.savefig("assets/karta_kandidata.png", dpi=200)
 plt.close()
 
 
@@ -127,7 +127,7 @@ granice = [
 
 ]
 
-slika = plt.imread("jezero_crater_satellite_map.jpg")
+slika = plt.imread("assets/jezero_crater_satellite_map.jpg")
 
 plt.imshow(slika, extent=granice, aspect="auto", alpha=0.6)
 
@@ -143,7 +143,7 @@ sns.scatterplot(
 
 plt.grid(color="white", linestyle="--", linewidth=0.5)
 
-plt.savefig("misijska_karta_jezero.jpg", dpi=200)
+plt.savefig("assets/misijska_karta_jezero.jpg", dpi=200)
 plt.close()
 
 
